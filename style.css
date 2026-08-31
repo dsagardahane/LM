@@ -79,6 +79,8 @@ header {
   max-width: 380px;
   height: 84px;
   object-fit: contain;
+  filter: contrast(1.25) brightness(1.02);
+  transform: translateY(1px);
 }
 
 .hero {
