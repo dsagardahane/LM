@@ -73,10 +73,12 @@ header {
   align-items: center;
 }
 
-.brand-name-text {
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: 0.24em;
+.brand-logo-img {
+  display: block;
+  width: auto;
+  max-width: 380px;
+  height: 84px;
+  object-fit: contain;
 }
 
 .hero {
@@ -261,8 +263,8 @@ header {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 560px;
-  object-fit: cover;
+  max-height: none;
+  object-fit: contain;
 }
 
 .editorial-section {
