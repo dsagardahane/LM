@@ -227,6 +227,37 @@ header {
   color: var(--bg);
 }
 
+.split-banner {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: #f6f3ee;
+  padding: 30px 40px;
+}
+
+.split-banner-content {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.split-banner-kicker {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.split-banner h3 {
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .editorial-section {
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
