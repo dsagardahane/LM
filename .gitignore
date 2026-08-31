@@ -1,0 +1,12 @@
+# OS files
+.DS_Store
+
+# editor files
+.vscode/
+
+# generated files
+__pycache__/
+*.pyc
+
+# environment files
+.env
