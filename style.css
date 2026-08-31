@@ -174,10 +174,11 @@ header {
   border: 1px solid #111111;
   background: #111111;
   color: #ffffff;
-  padding: 9px 16px;
+  padding: 10px 18px;
   font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 0.18em;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border-radius: 999px;
   cursor: pointer;
   transition: var(--transition);
 }
@@ -185,6 +186,7 @@ header {
 .product-buy:hover {
   background: #ffffff;
   color: #111111;
+  border-color: #111111;
 }
 
 .product-info {
