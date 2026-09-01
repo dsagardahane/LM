@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="top-bar">COMPLIMENTARY SHIPPING &amp; ATELIER PACKAGING ON ALL DOMESTIC ORDERS</div>
@@ -21,15 +22,94 @@
       </div>
     </header>
 
-    <section class="hero">
-      <img
-        src="LUSSO MARCO.jpg.jpeg"
-        alt="Luxury fragrance collection banner"
-        class="hero-banner-img"
-      />
+    <!-- HERO BANNER SLIDER (Video & Image parallel slides with Dot switching) -->
+    <section class="hero-slider" aria-label="Featured Collection Banner Slider">
+      <div class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+          <!-- Slide 1: Video Banner -->
+          <div class="slide" data-index="0">
+            <video
+              class="hero-media hero-video"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="auto"
+              poster="BLUR MARINA OG (1).jpeg"
+            >
+              <source src="Whisk_utmmv2y2ugo3ijnx0czyatytgtolrtlhzgzm1sy.mp4" type="video/mp4" />
+              <source src="banner-video.mp4" type="video/mp4" />
+              Your browser does not support HTML5 video.
+            </video>
+            <div class="slide-overlay">
+              <div class="slide-content">
+                <span class="slide-badge">NEW CAMPAIGN</span>
+                <h1 class="slide-title">BLUE MARINA</h1>
+                <p class="slide-subtitle">AQUATIC MARINE NOTES · ITALIAN BERGAMOT · SUN-BLEACHED CEDAR</p>
+                <a href="#lm-base" class="btn-slide">EXPLORE ESSENCE</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Main Collection Banner -->
+          <div class="slide" data-index="1">
+            <img
+              src="LUSSO MARCO.jpg.jpeg"
+              alt="LUSSO MARCO Luxury Fragrance Collection"
+              class="hero-media"
+              loading="eager"
+            />
+            <div class="slide-overlay">
+              <div class="slide-content">
+                <span class="slide-badge">LM BASE COLLECTION</span>
+                <h1 class="slide-title">ARCHITECTURAL FRAGRANCE</h1>
+                <p class="slide-subtitle">RARE ESSENCES CURATED FOR THE DISCERNING COLLECTOR</p>
+                <a href="#lm-base" class="btn-slide">DISCOVER COLLECTION</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Atelier Heritage Banner -->
+          <div class="slide" data-index="2">
+            <img
+              src="LUSSO MARCO (1).jpg.jpeg"
+              alt="LUSSO MARCO Haute Parfumerie"
+              class="hero-media"
+              loading="lazy"
+            />
+            <div class="slide-overlay">
+              <div class="slide-content">
+                <span class="slide-badge">SAVOIR-FAIRE</span>
+                <h1 class="slide-title">HAUTE PARFUMERIE</h1>
+                <p class="slide-subtitle">TIMELESS PRESENCE &amp; UNCOMPROMISED ARTISTRY</p>
+                <a href="#editorial" class="btn-slide">ENTER THE ATELIER</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Arrow Navigation -->
+        <button class="slider-btn prev-btn" id="prevSlide" aria-label="Previous Slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button class="slider-btn next-btn" id="nextSlide" aria-label="Next Slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+
+        <!-- Dot Navigation Indicators -->
+        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Banner slide indicators">
+          <button class="dot active" data-index="0" role="tab" aria-selected="true" aria-label="Slide 1: Blue Marina Video"></button>
+          <button class="dot" data-index="1" role="tab" aria-selected="false" aria-label="Slide 2: LM Base Collection"></button>
+          <button class="dot" data-index="2" role="tab" aria-selected="false" aria-label="Slide 3: Atelier Heritage"></button>
+        </div>
+      </div>
     </section>
 
-    <div class="collection-header">
+    <div class="collection-header" id="lm-base">
       <h2 class="collection-title">LM BASE</h2>
     </div>
 
@@ -46,7 +126,6 @@
             <h3 class="product-name">BLUE MARINA</h3>
             <p class="product-notes">Aquatic Marine Notes, Italian Bergamot &amp; Sun-Bleached Cedar</p>
             <p class="product-price">₹799</p>
-            <button class="product-btn">VIEW DETAILS</button>
           </div>
         </article>
 
@@ -61,7 +140,6 @@
             <h3 class="product-name">NOXIOUS</h3>
             <p class="product-notes">Smoky Oud, Aged Tobacco Leaf &amp; Velvet Black Vanilla</p>
             <p class="product-price">₹799</p>
-            <button class="product-btn">VIEW DETAILS</button>
           </div>
         </article>
 
@@ -76,7 +154,6 @@
             <h3 class="product-name">RED BITES</h3>
             <p class="product-notes">Glazed Cherry, Saffron Nectar &amp; Crystalline Amberwood</p>
             <p class="product-price">₹799</p>
-            <button class="product-btn">VIEW DETAILS</button>
           </div>
         </article>
       </div>
@@ -86,7 +163,7 @@
       <img src="LUSSO MARCO (1).jpg.jpeg" alt="LUSSO MARCO full banner" class="full-brand-banner-img" />
     </section>
 
-    <section class="editorial-section">
+    <section class="editorial-section" id="editorial">
       <div class="editorial-content">
         <h2 class="editorial-title">SAVOIR-FAIRE</h2>
         <p class="editorial-text">
